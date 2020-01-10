@@ -1,2 +1,0 @@
-# Blaze
-Personal web framework

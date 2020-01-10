@@ -1,0 +1,58 @@
+/*
+    File Name 		: blaze.css
+    Project Name    : Blaze
+	Date Created	: JAN 10 2020
+	Date Modified	: JAN 10 2020
+	Author			: Yash Gohel
+	Username 		: ygohel18
+	Email			: ygohel18@outlook.in
+	Licence			: GNU General Public License v3.0
+	Github			: https://github.com/Ygohel18/Blaze
+ */
+
+ @charset "UTF-8";
+
+:root {
+	--primary: #3F51B5;
+	--primary-light: #6573C3;
+	--primary-dark: #2C387E;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.8;
+	font-family: Roboto;
+	background: #ffffff;
+}
+
+.row, [row] {
+	display: grid;
+	grid-gap: 16px;
+	width: auto;
+}
+
+/* Media Queries  */
+
+@media only screen and (min-width : 360px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) { 
+
+}

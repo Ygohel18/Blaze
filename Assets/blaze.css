@@ -32,6 +32,13 @@ html, body {
 	width: auto;
 }
 
+.container, [container] {
+	width: auto;
+	height: auto;
+	margin: 32px;
+	padding: 32px 0;
+}
+
 /* Media Queries  */
 
 @media only screen and (min-width : 360px) {
@@ -49,10 +56,12 @@ html, body {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-
+    
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) { 
-
+    .container, [container] {
+        margin: 128px;
+    }
 }

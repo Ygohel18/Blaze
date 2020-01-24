@@ -16,6 +16,27 @@
 	--primary: #3F51B5;
 	--primary-light: #6573C3;
 	--primary-dark: #2C387E;
+
+	--shadow-1: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24),
+				0px 2px 5.88px 0.12px rgba(0, 0, 0, 0.16);
+	--shadow-2: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24),
+				0px 1px 6.86px 0.14px rgba(0, 0, 0, 0.16);
+	--shadow-3: 0px 5px 6.58px 0.42px rgba(0, 0, 0, 0.24),
+				0px 2px 9.8px 0.2px rgba(0, 0, 0, 0.16);
+	--shadow-4:	0px 5px 6.58px 0.42px rgba(0, 0, 0, 0.24),
+				0px 2px 9.8px 0.2px rgba(0, 0, 0, 0.16);
+	--shadow-6: 0px 10px 14.1px 0.9px rgba(0, 0, 0, 0.24),
+				0px 4px 19.6px 0.4px rgba(0, 0, 0, 0.16);
+	--shadow-8: 0px 13px 18.8px 1.2px rgba(0, 0, 0, 0.24),
+				0px 5px 26.46px 0.54px rgba(0, 0, 0, 0.16);
+	--shadow-9:	0px 18px 25.38px 1.62px rgba(0, 0, 0, 0.24),
+				0px 9px 35.28px 0.72px rgba(0, 0, 0, 0.16);
+	--shadow-12: 0px 20px 28.2px 1.8px rgba(0, 0, 0, 0.24),
+				 0px 8px 40.18px 0.82px rgba(0, 0, 0, 0.16);
+	--shadow-16: 0px 28px 37.6px 2.4px rgba(0, 0, 0, 0.24),
+				 0px 11px 51.94px 1.06px rgba(0, 0, 0, 0.16);
+	--shadow-24: 0px 39px 56.4px 3.6px rgba(0, 0, 0, 0.24),
+				 0px 15px 79.38px 1.62px rgba(0, 0, 0, 0.16);
 }
 
 html, body {
@@ -26,15 +47,31 @@ html, body {
 	background: #f2f2f2;
 }
 
+
+
 .mg-y-32 { margin: 32px 0; }
 .pd-x-16 { padding: 0 16px; }
 .pd-x-32 { padding: 0 32px; }
 .pd-y-16 { padding: 16px 0; }
 .pd-y-32 { padding: 32px 0; }
+.pd-16 { padding: 16px; }
 .mg-16 { margin: 16px; }
+.mg-32 { margin: 32px; }
 
 [max-width~="320"] { max-width: 320px; }
 [max-width~="480"] { max-width: 480px; }
+
+.center, [center] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.pos-center, [pos~="center"] {
+	margin: 0 auto;
+	width: 100%;
+}
 
 .row, [row] {
 	display: grid;
@@ -89,9 +126,16 @@ header, .header, [header] {
 	top: 0;
 	width: 100%;
 }
+
 .heading, [heading] {
 	font-size: larger;
 	color: var(--primary-dark);
+}
+
+.subheading, [subheading] {
+	font-size: normal;
+	color: #000;
+	opacity: 0.36;
 }
 
 .title, [title] {
@@ -106,7 +150,7 @@ form, .form, [form] {
 	position: relative;
 	width: auto;
 	background: #FFF;
-	border-radius: 8px;
+	border-radius: 16px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .07);
 }
 

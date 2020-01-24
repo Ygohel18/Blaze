@@ -11,9 +11,7 @@
 		
 		<!-- CSS File -->	
 			<link rel="stylesheet" href="blaze.css">
-		<!-- font-awesome core css -->
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-            
+		
         <style>
 
             html {
@@ -26,20 +24,29 @@
                 background: var(--primary);
             }
 
-            #wow-auth {
-                margin-top: -32px;
+            #wow-auth-1,  #wow-auth-2, #wow-auth-3 {
+                margin-top: -32px!important;
             }
 
-            #wow-auth p {
+            .auth-p {
                 text-align: center;
-                font-weight: bold;
-                margin: 0;
+                margin: 0 !important;
             }
 
             .auth-btn {
                 border-radius: 0 0 16px 16px;
             }
+
+            .show {
+                display: grid;
+            }
+
+            .hide {
+                display: none;
+            }
         </style>
+
+
 	</head>
 	
 	<body> 
@@ -48,22 +55,71 @@
             <img src="img/ic-wow.png" class="auth-icon">
         </section>
 
-        <div class="row cl-1" id="wow-auth">
-			<form max-width="320" pos="center">
-                <p heading style="margin-top: 16px;">WOW</p>
-                <p subheading>first party auth</p>
+        <div class="row cl-1 show" id="wow-auth-1" max-width="320" pos="center">
+			<form class="txt-center">
+                <p heading style="margin-top: 24px!important;" class="auth-p">WOW</p>
+                <p subheading class="auth-p">first party auth</p>
 				<div class="mg-32 row cl-1">
-					<input type="text" placeholder="Username" name="username" value=""/>
-					<input type="password" placeholder="Password" name="password" value=""/>
+                    <input type="text" placeholder="Full Name" name="fullname" value=""/>
+                    <div class="row cl-1">
+                        <input type="number" min="0" max="299" placeholder="Country Code" name="cc" value=""/>    
+                        <input type="number" placeholder="Mobile Number" maxlength="10" name="noemail" value=""/>
+                    </div>
+                    <input type="text" placeholder="Email" name="email" value=""/>
+					
                 </div>
-                <div btn class="auth-btn">Login Now</div>
+                <div btn class="auth-btn" id="auth-1-btn">GET OTP</div>
 			</form>
-		</div>
+        </div>
 
-		<div class="container">
+        <div class="row cl-1 hide" id="wow-auth-2" max-width="320" pos="center">
+			<form class="txt-center">
+                <p heading style="margin-top: 24px!important;" class="auth-p">WOW</p>
+                <p subheading class="auth-p">first party auth</p>
+				<div class="mg-32 row cl-1">
+                    <input type="text" placeholder="Enter OTP" name="otp" value=""/>
+                </div>
+                <div btn class="auth-btn" id="auth-2-btn">CONTINUE</div>
+			</form>
+        </div>
 
-		
-		
-		</div>
+        <div class="row cl-1 hide" id="wow-auth-3" max-width="320" pos="center">
+			<form class="txt-center">
+                <p heading style="margin-top: 24px!important;" class="auth-p">WOW</p>
+                <p subheading class="auth-p">first party auth</p>
+				<div class="mg-32 row cl-1">
+                    <input type="text" placeholder="Set Username" name="useranem" value=""/>
+                    <input type="password" placeholder="Set Password" name="password" value=""/>
+                    <input type="password" placeholder="Retype Password" name="password2" value=""/>
+                </div>
+                <div btn class="auth-btn" id="auth-3-btn">SIGNUP</div>
+			</form>
+        </div>
+
+        <script>
+            var auth_1 = document.querySelector('#wow-auth-1');
+            var auth_2 = document.querySelector('#wow-auth-2');
+            var auth_3 = document.querySelector('#wow-auth-3');
+            var btn_1 = document.querySelector('#auth-1-btn');
+            var btn_2 = document.querySelector('#auth-2-btn');
+            var btn_3 = document.querySelector('#auth-3-btn');
+
+
+            btn_1.addEventListener('click', (e) => { 
+                auth_1.classList.remove('show');
+                auth_2.classList.remove('hide');
+		        auth_1.classList.add('hide');
+                auth_2.classList.add('show');
+            })
+
+            btn_2.addEventListener('click', (e) => { 
+                auth_2.classList.remove('show');
+                auth_3.classList.remove('hide');
+		        auth_2.classList.add('hide');
+                auth_3.classList.add('show');
+            })
+
+        </script>
+
 	</body>
 </html>

@@ -79,6 +79,10 @@ html, body {
 	width: auto;
 }
 
+.txt-center {
+	text-align: center;
+}
+
 .cl-1, .cl, c[l], [cl~="1"] { grid-template-columns: 1fr; }	
 .cl-2, [cl~="2"] { grid-template-columns: 1fr 1fr; }
 .cl-3, [cl~="3"] { grid-template-columns: 1fr 1fr 1fr; }

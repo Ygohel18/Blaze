@@ -1,5 +1,5 @@
 # Blaze
-Personal web framework
+Personal web framework and theme starter pack
 
 ## ChangeLog
 
